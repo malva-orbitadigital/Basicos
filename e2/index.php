@@ -16,4 +16,6 @@ for ($i=0; $i < 100; $i++) {
 echo $num;
 echo "<br>";
 
+echo "Raíz cuadrada de ". $num . ": " . round(sqrt($num));
+
 ?>
