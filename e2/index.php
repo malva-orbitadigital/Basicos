@@ -17,5 +17,10 @@ echo $num;
 echo "<br>";
 
 echo "Raíz cuadrada de ". $num . ": " . round(sqrt($num));
+echo "<br>";
+
+$numStr = strval($num);
+echo substr_replace($numStr, "code", strlen($numStr)-1, 0);
+
 
 ?>
