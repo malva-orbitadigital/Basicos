@@ -9,6 +9,11 @@ echo $var;
 echo "<br>";
 
 $var = explode("-", $var);
-var_dump($var);
+print_r($var);
+echo "<br>";
+
+rsort($var);
+print_r($var);
+
 
 ?>
