@@ -6,28 +6,37 @@ echo "<br>";
 $textoArr = explode(" ", $texto);
 
 $posAlgas = array_search("algas", $textoArr, true);
-echo "Posición 'algas': " . $posAlgas;
+echo "Posición 'algas': " . $posAlgas+1;
 echo "<br>";
 
-$texto = str_replace("realmente", "muy", $texto);
+$texto = str_replace(array( "Comer", "realmente"), array("cosa","Adios"), $texto);
 echo $texto;
 echo "<br>";
 
-$contieneAnacardo = str_contains($texto, "anacardo");
-echo "Contiene anarcardo: ";
-echo $contieneAnacardo?"sí":"no";
+$buscar = "asd";
+$contiene = stripos($texto, $buscar);
+echo "Contiene '".$buscar."': ";
+echo $contiene != false ?"sí":"no";
 echo "<br>";
 
-$texto = strrev($texto);
+// $texto = strrev($texto);
+$palabras = explode(" ", $texto);
+$texto = "";
+foreach ($palabras as $palabra){
+    $texto .= strrev($palabra)." ";
+}
 echo $texto;
 echo "<br>";
 
-$numE = count_chars($texto);
+$numChar = substr_count($texto, "e");
+echo "Hay ". $numChar . " 'e' en el texto";
 
-foreach (count_chars($texto, 1) as $i => $val) {
-    if (chr($i) == 'e'){
-        echo "Hay $val \"" , chr($i) , "\" en el texto\n";
-    }
- }
+
+// foreach (count_chars($texto, 1) as $i => $val) {
+//     if (chr($i) == 'e'){
+//         echo "Hay $val \"" , chr($i) , "\" en el texto\n";
+//     }
+//  }
+
 
 ?>
