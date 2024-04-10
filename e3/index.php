@@ -8,5 +8,7 @@ $var = str_replace("a", "tortuga", $var);
 echo $var;
 echo "<br>";
 
+$var = explode("-", $var);
+var_dump($var);
 
 ?>
