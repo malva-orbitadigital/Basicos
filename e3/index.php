@@ -17,7 +17,11 @@ print_r($var);
 echo "<br>";
 
 $nuevo = array_filter($var, function($a) {
-    return !str_contains($a, 'a');
+        return !str_contains($a, 'a');
     });
 print_r($nuevo);
+echo "<br>";
+
+echo "Dimensión: " . count($nuevo);
+
 ?>
